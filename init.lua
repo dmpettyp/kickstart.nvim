@@ -124,7 +124,6 @@ vim.opt.breakindent = true
 -- tab indent is 2 spaces
 vim.opt.ts = 2
 
--- tab indent is 2 spaces
 vim.opt.wrap = false
 
 -- Save undo history
@@ -136,6 +135,8 @@ vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
+
+vim.opt.colorcolumn = '80'
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -789,6 +790,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        go = { 'goimports' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
